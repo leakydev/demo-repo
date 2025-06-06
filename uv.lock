@@ -1,0 +1,36 @@
+version = 1
+revision = 2
+requires-python = ">=3.11"
+
+[[package]]
+name = "military-crypto-lib"
+version = "0.1.2"
+source = { registry = "http://artifactory:8082/artifactory/api/pypi/pypi-local/simple" }
+sdist = { url = "http://artifactory:8082/artifactory/api/pypi/pypi-local/military-crypto-lib/0.1.2/military_crypto_lib-0.1.2.tar.gz", hash = "sha256:eec48ceba9b1d0033a9df0e25bce81666c40a8d8cf312b6ecbfe5c6c0cb07c6a" }
+wheels = [
+    { url = "http://artifactory:8082/artifactory/api/pypi/pypi-local/military-crypto-lib/0.1.2/military_crypto_lib-0.1.2-py3-none-any.whl", hash = "sha256:7ba9ba87f0e8bc8f1bc1100c9c3702a9ef097b55a288ba789a223079cc6e9341" },
+]
+
+[[package]]
+name = "tk"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a0/81/742b342fd642e672fbedecde725ba44db44e800dc4c936216c3c6729885a/tk-0.1.0.tar.gz", hash = "sha256:60bc8923d5d35f67f5c6bd93d4f0c49d2048114ec077768f959aef36d4ed97f8", size = 2247, upload-time = "2019-07-08T06:51:58.051Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/0b/029cbdb868bb555fed99bf6540fff072d500b3f895873709f25084e85e33/tk-0.1.0-py3-none-any.whl", hash = "sha256:703a69ff0d5ba2bd2f7440582ad10160e4a6561595d33457dc6caa79b9bf4930", size = 3879, upload-time = "2019-07-08T06:51:55.175Z" },
+]
+
+[[package]]
+name = "zero-file-share"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "military-crypto-lib" },
+    { name = "tk" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "military-crypto-lib", specifier = ">=0.1.1", index = "http://artifactory:8082/artifactory/api/pypi/pypi-local/simple" },
+    { name = "tk", specifier = ">=0.1.0" },
+]
