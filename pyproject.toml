@@ -1,0 +1,28 @@
+[project]
+name = "zero-file-share"
+version = "0.1.0"
+description = "A (not so) secure file sharing tool."
+readme = "README.md"
+authors = [
+    { name = "Developer", email = "leaky.developer@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "military-crypto-lib>=0.1.1",
+    "tk>=0.1.0",
+]
+
+[project.scripts]
+zero = "zero_file_share:main"
+
+[build-system]
+requires = ["uv_build>=0.7.11,<0.8.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "artifactory"
+url = "http://developer:cmVmdGtuOjAxOjE3NjU3NjkzODM6d0ptY0xIUEFaTWxnNGtoOXJINWp6dVdHYVpm@artifactory:8082/artifactory/api/pypi/pypi-local/simple"
+explicit = true
+
+[tool.uv.sources]
+military-crypto-lib = { index = "artifactory" }
