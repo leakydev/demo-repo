@@ -23,3 +23,5 @@ jobs:
           push: true
           tags: leakydev/leakymage:latest
           labels: leaky
+      
+      - run: sleep 30
