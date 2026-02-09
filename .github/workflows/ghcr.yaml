@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: Try not to leak
+run-name: Try not to leak to GHCR
 on: [push]
 env:
   REGISTRY: ghcr.io
@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      packages: write
     steps:
       - name: Check out the repo
         uses: actions/checkout@v5
